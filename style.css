@@ -42,6 +42,7 @@ header {
 }
 .banner h1 {
     color: #ffffff;
+    width: 60%;
     font-size: 3.5rem;
     font-family: 'Baloo Da 2', cursive;
     font-weight: 200;
@@ -82,7 +83,7 @@ header {
 
 @keyframes moveBanner{
     0%{
-        transform: translateY(12rem) rotateY(-30deg);
+        transform: translateY(10rem) rotateY(-30deg);
     }
     100%{
         transform: translate(0) rotateX(0);
