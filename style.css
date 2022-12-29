@@ -5,9 +5,41 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+div.container {
+    margin: 0 0;
+    padding: 0 0;
+}
+:root {
+    --font-primary: 'Baloo Da 2', cursive;
+    --font-secundary: 'Josefin Slab', serif;
+    --font-action: 'Mulish', sans-serif;
 }
 
 /*Header da Página*/
+.hamburguer {
+    /*background-color: red;*/
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.line {
+    width: 100%;
+    height: 0.15rem;
+    background-color: #bebebe;
+    box-shadow: 0 0.06rem 2px #000046;
+
+}
+
 header {
     width: 100%;
     height: 100vh; /*vh é view height(altura da visualização) */
@@ -44,16 +76,16 @@ header {
     color: #ffffff;
     width: 60%;
     font-size: 3.5rem;
-    font-family: 'Baloo Da 2', cursive;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: 0.2rem 0.2rem 2px rgba(0, 0, 0, 0.4);
-    line-height: 3.5rem;
+    line-height: 3rem;
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 1.5s 0.5s forwards;
 }
 .banner p {
-    font-family: 'Josefin Slab', serif;
+    font-family: var(--font-secundary);
     color: #ffffff;
     font-size: 2rem;
     text-shadow: 0.2rem 0.2rem 2px rgba(0, 0, 0, 0.4);
@@ -62,7 +94,7 @@ header {
     animation: moveBanner 1.5s 0.7s forwards;
 }
 .banner button {
-    font-family: 'Mulish', sans-serif;
+    font-family: var(--font-action);
     color: #fff;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -86,7 +118,65 @@ header {
         transform: translateY(10rem) rotateY(-30deg);
     }
     100%{
-        transform: translate(0) rotateX(0);
+        transform: translateX(0) rotateX(0);
         opacity: 1;
     }
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: rgb(223, 222, 222);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+}
+.sidebar.show-menu {
+    right: 0;
+}
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-item {
+    text-align: center;
+    margin: 1rem 0;
+}
+.menu-link {
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+    
+    
+}
+.menu-link:hover {
+    color: rgb(22, 42, 95);
+    text-shadow: inset 0 0 1px #ffffff;
+    
+} 
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-media i {
+    color: #bebebe;
+    height: 2.7rem;
+    width: 2.7rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 42, 95);
+    transition: background-color 1s;
+}
+.social-media i:hover {
+    background-color: rgb(50, 71, 129);
 }
