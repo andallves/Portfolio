@@ -8,10 +8,7 @@
     list-style: none;
     text-decoration: none;
 }
-div.container {
-    margin: 0 0;
-    padding: 0 0;
-}
+
 :root {
     --font-primary: 'Baloo Da 2', cursive;
     --font-secundary: 'Josefin Slab', serif;
@@ -54,6 +51,33 @@ div.container {
 .show-menu #line3{
     transform: rotate(-45deg) translate(0, -.75rem);
 }
+.hamburguer span {
+    position: absolute;
+    left: 2.5rem;
+    background-color: rgb(22, 42, 95);
+    color: #bebebe;
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-action);
+    text-shadow: 0 0 1px rgb(0, 0, 0);
+    opacity: 0;
+}
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid rgb(22, 42, 95);
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+}
+
 
 header {
     width: 100%;
@@ -195,5 +219,6 @@ header {
     transition: background-color 1s;
 }
 .social-media i:hover {
-    background-color: rgb(50, 71, 129);
+    background-color: rgb(58, 77, 131);
+    
 }
