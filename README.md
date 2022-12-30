@@ -7,7 +7,7 @@ Um curso/projeto de desenvolvimento web com a criação de um Portifolio
 O controle das tarefas desse projeto será realizado no GitHub.
 
 ## Ícones
-:package: nova funcionalidade
+:sparkles: nova funcionalidade
 :up: atualização
-:beetle: correção de bug
+:bug: correção de bug
 :checkered_flag: release
