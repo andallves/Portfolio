@@ -170,6 +170,7 @@ header {
     top: 0;
     right: -20rem;
     transition: 1s;
+    z-index: 10;
 }
 .show-menu .sidebar{
     right: 0;
@@ -224,6 +225,10 @@ header {
 }
 
 /*Sessão Conhecimentos*/
+.sessao-conhecimentos {
+    background-color: #eeeeee;
+    z-index: 2;
+}
 
 .conhecimentos{
     display: grid;
@@ -260,10 +265,6 @@ header {
 .conhecimento:nth-child(6){
     grid-column: 11 / 14;
     grid-row: 5 / -1;
-}
-.sessao-conhecimentos {
-    background-color: #bebebe;
-    z-index: 2;
 }
 .sessao-header {
     display: flex;
@@ -312,4 +313,113 @@ header {
     opacity: .1;
     box-shadow: inset 0 0 1px o.2em solid black;
     z-index: 3;
+}
+
+/*Sessao Projetos*/
+.sessao-projetos {
+    height: 100vh;
+
+}
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    
+}
+.card {
+    width: 18rem;
+    height: 27rem;
+    position: relative;
+    cursor: pointer;
+    animation: moverProjetos 1.5s ease 0.4s forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    
+}
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+.card-img-wrapper img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    clip: rect(0 20rem 30rem 0);
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+.card:hover .card-img-wrapper img {
+    opacity: 0.3;
+}
+.card-info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    padding: 2.35rem;
+    text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
+    transition: all .3s;
+    
+}
+.card:hover{
+    box-shadow: 0 0 .4rem rgba(0, 0, 0, .6);
+}
+.card:hover .card-info{
+    opacity: 1;
+    visibility: visible;
+    border-radius: .5rem;
+}
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+.card-info h3 {
+    font-family: var(--font-action);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #1CB5E0;
+    margin-bottom: 1.5rem;
+}
+.card-info p {
+    font-family: var(--font-secundary);
+    font-weight: 400;
+    color: #eee;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #000046; 
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  
+    background: linear-gradient(to left, #1CB5E0, #000046); 
+    border: none;
+    border-radius: .5rem;
+    color: #eee;
+    margin-top: 0.5rem;
+    font-family: var(--font-action);
+    font-size: 1rem;
+    box-shadow: 0 1rem .8rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    
+}
+.card-info button:hover{
+    background: rgba(28, 181, 224, 0.8);
+    color: #e6e6e6;
+    text-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.8);
+}
+@keyframes moverProjetos{
+    0%{
+        transform: translateX(-10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateX(0) rotateX(0);
+        opacity: 1;
+    }
 }

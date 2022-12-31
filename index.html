@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="_img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="_img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="_img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <title>Portfólio</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
 
         <header id="home">
             <div class="img-wrapper">
-                <img src="imagens/bg.jpg" alt="">
+                <img src="_img/bg.jpg" alt="">
             </div>
             <div class="banner">
                 <h1>Web Developer & Front End Designer</h1>
@@ -37,7 +37,7 @@
                 <ul class="menu">
                     <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
                     <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Orçamento</a></li>
                 </ul>
@@ -109,15 +109,57 @@
                     </div>
                 </div>
                 <div class="conhecimento-img-wrapper">
-                    <img src="imagens/conhecimentos1.png" alt="Imagem conhecimento">
+                    <img src="_img/conhecimentos1.png" alt="Imagem que representa conhecimento">
                 </div>
             </div>
+        </section>
+        <section class="sessao-projetos" id="projetos">
+            <div class="sessao-header">
+                <h1>Projetos</h1>
+            </div>
+            <div class="projetos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="_img/templates-projetos/lojaEsportiva.jfif" alt="Template do site da ASKAE">
+                    </div>
+                    <div class="card-info">
+                        <h2>ASKAE</h2>
+                        <h3>HTML, CSS</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa vitae deserunt saepe recusandae. Veritatis alias error molestiae similique. Asperiores sunt, illum accusantium reiciendis ad quae labore mollitia dignissimos est.</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="_img/templates-projetos/animalRiders.jfif" alt="Imagem do projeto ToDo">
+                    </div>
+                    <div class="card-info">
+                        <h2>ToDo</h2>
+                        <h3>JavaScript</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque, quis mollitia omnis architecto totam fuga blanditiis, quas adipisci ipsa repellendus ducimus, ullam id. Autem delectus incidunt numquam soluta veniam?</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="_img/templates-projetos/langindPage.jfif" alt="Templete de uma Landing Page">
+                    </div>
+                    <div class="card-info">
+                        <h2>Orçamento </h2>
+                        <h3>JavaScript</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque, quis mollitia omnis architecto totam fuga blanditiis, quas adipisci ipsa repellendus ducimus, ullam id. Autem delectus incidunt numquam soluta veniam?</p>
+                        <button>Saiba Mais</button>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
     </div>
 </body>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/script.js"></script>
+<script src="_js/jquery-3.2.1.min.js"></script>
+<script src="_js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
 
 </html>
