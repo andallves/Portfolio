@@ -1,4 +1,4 @@
-//Animação do menu hamburger
+//Animação do menu hamburguer
 document.querySelector(".hamburguer").addEventListener("click", () =>
     document.querySelector(".container").classList.toggle("show-menu")
 );
@@ -9,26 +9,35 @@ document.querySelector(".hamburguer").addEventListener("click", () =>
 $('nav a').click(function(e) {
     e.preventDefault();
     var id = $(this).attr('href'), targetOffset = $(id).offset().top;
-    console.log(id)
     $('html, body').animate({scrollTop: targetOffset}, 1000)
     
 });
 
 
 //Animação dos Elementos ao scrollar a página
-const observer = new IntersectionObserver(entries => {
-    console.log(entries)
+(function() {
+    var $target = $('.projetos'),
+        offset = $(window).height() * 3/4;
+        offsetsaida = $(window).height() * 2/4;
+        
 
-    Array.from(entries).forEach(entry => {
-        if(entry.intersectionRatio >= 1) {
-            entry.target.classList.add('init-hidden-off')
-        }
-    })   
+    function animeScroll() {
+        var documentTop = $(document).scrollTop()
+
+        console.log(documentTop);
+        $target.each(function(){
+            var itemTop = $('.projetos').offset().top;
+            if((documentTop > (itemTop - offset)) && (documentTop < (itemTop + offsetsaida))) {
+                $('.projetos').addClass('projetos-anime');
+            } else {
+                $('.projetos').removeClass('projetos-anime');
+            }
+        })
+        
+    }
+    animeScroll();
+    $(document).scroll(function() {
+        animeScroll();
 })
-Array.from(document.querySelectorAll('.init-hidden')).forEach(element => {
-    observer.observe(element)
-})
-
-
-
+}());
 
