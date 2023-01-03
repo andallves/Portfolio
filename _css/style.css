@@ -15,7 +15,6 @@
     --font-action: 'Mulish', sans-serif;
 }
 
-
 /*Header da Página*/
 .hamburguer {
     width: 2rem;
@@ -524,19 +523,20 @@ header {
     width: 100%;
     height: 100vh;
     background-image: 
-        linear-gradient(rgba(15, 15, 15, 0.4), rgba(22,22,22, 0.9)),
-        url(/_img/bg-orcamento.jpg);
+        linear-gradient(rgba(15, 15, 15, 0.4), rgba(22,22,22, 0.8)),
+        url(/_img/bg-orcamento1.jpg);
     object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
 }
 .orcamento-wrapper{
     width: 60%;
     height: 80%;
-    background-color: #ffffff99;
+    background-color: #ffffffd3;
     border-radius: 10px;
-    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8);
     position: relative;
 }
 .orcamento-wrapper h1{
@@ -560,16 +560,14 @@ header {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
-    row-gap: 2rem;
+    row-gap: 3rem;
 }
 .orcamento-wrapper label{
     font-family: var(--font-secundary);
     font-size: 1.5rem;
     font-weight: bold;
 }
-.sessao-orcamento input[type="checkbox"]{
-    
-}
+
 .sessao-orcamento input[type="number"]{
     font-family: var(--font-secundary);
     width: 4rem;
@@ -579,9 +577,64 @@ header {
     border: none;
     padding: 0.3rem;
 }
+
+
 .btn-orcamento{
     text-transform: uppercase;
     padding: 1rem;
     cursor: pointer;
     grid-column: 2;
+}
+
+/*sessao footer*/
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+.social-list a{
+    margin: 0 2rem;
+}
+.social-list ul{
+    display: flex;
+}
+.social-list i{
+    font-size: 1.3rem;
+    color: #bebebe;
+}
+.social-list i:hover{
+    color: #1CB5E0 
+}
+#link-topo{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #000046; 
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  
+    background: linear-gradient(to left, #1CB5E0, #000046); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #e6e6e6;
+    border-radius: 0.3rem;
+    text-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.5);
 }

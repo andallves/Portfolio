@@ -14,6 +14,7 @@ $('nav a').click(function(e) {
     
 });
 
+
 //Animação dos Elementos ao scrollar a página
 const observer = new IntersectionObserver(entries => {
     console.log(entries)
