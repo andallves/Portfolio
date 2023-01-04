@@ -24,7 +24,6 @@ $('nav a').click(function(e) {
     function animeScroll() {
         var documentTop = $(document).scrollTop()
 
-        console.log(documentTop);
         $target.each(function(){
             var itemTop = $('.projetos').offset().top;
             if((documentTop > (itemTop - offset)) && (documentTop < (itemTop + offsetsaida))) {
@@ -40,4 +39,38 @@ $('nav a').click(function(e) {
         animeScroll();
 })
 }());
+
+/*Orçamento de projeto*/
+
+document.querySelector('#qtde').addEventListener("change", atualizarPreco)
+document.querySelector('#js').addEventListener("change", atualizarPreco)
+document.querySelector('#layout-sim').addEventListener("change", atualizarPreco)
+document.querySelector('#layout-nao').addEventListener("change", atualizarPreco)
+document.querySelector('#prazo').addEventListener("change", function() {
+    const prazo = document.querySelector('#prazo').value
+    if(prazo == 1) {
+        document.querySelector('label[for=prazo]').innerHTML = `Prazo de  ${prazo} semana`
+    } else {
+        document.querySelector('label[for=prazo]').innerHTML = `Prazo de  ${prazo} semanas`
+    }
+    atualizarPreco()
+})
+
+
+function atualizarPreco() {
+    const qtde = document.querySelector('#qtde').value
+    const temJS = document.querySelector('#js').checked
+    const incluiLayout = document.querySelector('#layout-sim').checked
+    const prazo = document.querySelector('#prazo').value
+
+    let preco = qtde * 100
+    if(temJS) preco *= 1.1
+    if(incluiLayout) preco += 500
+    let taxaUrgencia = 1 - prazo * 0.1
+    preco *= 1 + taxaUrgencia
+
+    document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`
+    
+}
+
 
