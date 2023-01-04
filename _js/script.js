@@ -4,16 +4,6 @@ document.querySelector(".hamburguer").addEventListener("click", () =>
 );
 
 
-//Animação do Scroll da página
-
-$('nav a').click(function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href'), targetOffset = $(id).offset().top;
-    $('html, body').animate({scrollTop: targetOffset}, 1000)
-    
-});
-
-
 //Animação dos Elementos ao scrollar a página
 (function() {
     var $target = $('.projetos'),

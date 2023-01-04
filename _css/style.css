@@ -14,7 +14,9 @@
     --font-secundary: 'Josefin Slab', serif;
     --font-action: 'Mulish', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 
 /*Header da Página*/
 .hamburguer {
