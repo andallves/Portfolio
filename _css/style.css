@@ -321,6 +321,7 @@ header {
 /*Sessao Projetos*/
 .sessao-projetos {
     height: 100vh;
+    background-color: #eeeef1;
 
 }
 .projetos {
@@ -337,11 +338,7 @@ header {
     height: 25rem;
     position: relative;
     cursor: pointer;
-    
-    
-    animation: moverProjetos 1.5s ease 0.4s forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    
+    border-radius: 0.5rem;
 }
 .projetos-anime{
     opacity: 1;
