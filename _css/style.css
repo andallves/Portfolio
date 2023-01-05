@@ -152,7 +152,8 @@ header {
 }
 .banner button:hover {
     opacity: 0.9;
-    color: black;
+    color: rgb(230, 230, 230);
+    box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.8);
 }
 
 @keyframes moveBanner{
